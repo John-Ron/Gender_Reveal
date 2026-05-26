@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Big Reveal | An Interactive Celebration</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="custom-cursor" id="customCursor"></div>
+
+    <div class="ambient-bg" id="ambientBg"></div>
+    <canvas id="confettiCanvas"></canvas>
+
+    <header class="global-controls">
+        <div class="logo">GENDER REVEAL</div>
+        <div class="control-buttons">
+            <button id="soundToggle" class="control-btn" aria-label="Toggle Sound">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-speaker"><path d="M11 5L6 9H2v6h4l5 4V5z"></path><path d="M15.54 8.46a5 5 0 0 1 0 7.07" class="sound-wave"></path><path d="M19.07 4.93a10 10 0 0 1 0 14.14" class="sound-wave"></path></svg>
+            </button>
+        </div>
+    </header>
+
+    <section id="introScreen" class="screen active">
+        <div class="glass-card intro-content">
+            <span class="pre-title">You Are Invited To Witness</span>
+            <h1 class="cinematic-title">Ready for the<br><span class="gradient-text">Big Reveal?</span></h1>
+            <p class="subtitle">A beautiful journey is about to unveil its grandest secret. Join us in the excitement and play along to discover the magic.</p>
+            
+            <button id="startBtn" class="premium-btn">
+                <span>Begin The Experience</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Interact to Begin</p>
+        </div>
+    </section>
+
+    <section id="gameScreen" class="screen">
+        <div class="game-hud">
+            <div class="hud-item">
+                <span class="hud-label">Balloons Popped</span>
+                <span id="scoreDisplay" class="hud-value">0 / 7</span>
+            </div>
+            <div class="progress-container">
+                <div id="progressBar" class="progress-bar"></div>
+            </div>
+            <div class="hud-item">
+                <span class="hud-label">Suspense Level</span>
+                <span id="suspenseDisplay" class="hud-value status-low">Rising</span>
+            </div>
+        </div>
+
+        <div class="game-instruction">
+            <p>Pop <span class="highlight">7 floating balloons</span> to unlock the final countdown!</p>
+        </div>
+
+        <div id="gameArena" class="game-arena"></div>
+    </section>
+
+    <div id="revealSequence" class="reveal-overlay">
+        <div class="heartbeat-container">
+            <div class="heartbeat-glow"></div>
+            <div id="countdownNumber" class="countdown-text">3</div>
+        </div>
+        <p class="suspense-subtext">The universe is preparing your answer...</p>
+    </div>
+
+    <section id="celebrationScreen" class="screen">
+        <div class="glass-card celebration-content">
+            <div class="reveal-badge" id="revealBadge">Pure Joy</div>
+            <h2 id="revealResultText" class="reveal-result-title">It's a...</h2>
+            
+            
+            <div class="action-group">
+                <button id="replayBtn" class="premium-btn secondary">
+                    <span>Play Again</span>
+                </button>
+                
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+<!-- Galaxy Background -->
+<div class="galaxy">
+
+  <!-- Glow Orbs -->
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+
+  <!-- Shooting Stars -->
+  <div class="shooting-star"></div>
+  <div class="shooting-star"></div>
+
+  <!-- Stars -->
+  <div class="stars" id="stars"></div>
+
+</div>
+</div>
+</div>
+</html>
